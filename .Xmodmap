@@ -1,14 +1,26 @@
 ! This file must be processed with xmodmap in order to take effect. In
+<<<<<<< HEAD
 ! the case of Xfce4 this is done automatically by the startup files.
+=======
+! some desktop environments and depending on your personal
+! configuration, this might be done automatically by the startup files.
+>>>>>>> b64d7703a979d330669576b71bb7aebc5f0a12eb
 !
 ! Use the "xev"-Tool to find out the required keycodes.
 !
 ! Run script "xmodmap-template-generator" to generate a template for
 ! this file which contains all symbolic names available for mapping.
 !
+<<<<<<< HEAD
 ! Alternatively, to do this manually, look into the File
 !
 ! /usr/include/X11/XF86keysym.h
+=======
+! Alternatively, to do this manually, look into the Files
+!
+! /usr/include/X11/XF86keysym.h
+! /usr/include/X11/keysym.h
+>>>>>>> b64d7703a979d330669576b71bb7aebc5f0a12eb
 !
 ! to find the symbolic names, like for instance the line
 !
@@ -26,8 +38,18 @@
 ! the multimedia key, such as executing an arbitrary program.
 !
 ! If your desktop Environment or Windows Manager does not support such
+<<<<<<< HEAD
 ! hotkey handling, x11-misc/xbindkeys can be emerged for this as a
 ! stand-alone solution.
+=======
+! hotkey handling, the package xbindkeys can be installled for this as
+! a stand-alone solution.
+!
+! Note that xmodmap can only modify the existing keyboard
+! configuration, but it cannot reset it back to some defaults. Use
+! "setxkbmap -layout de" to reset the bindings if needed (replace the
+! "de" in this example with your preferred layout).
+>>>>>>> b64d7703a979d330669576b71bb7aebc5f0a12eb
 
 ! Mode Switch Lock
 !keycode ? = XF86ModeLock
@@ -56,7 +78,11 @@ keycode 174 = XF86AudioLowerVolume
 ! Mute sound from the system
 keycode 160 = XF86AudioMute
 
+<<<<<<< HEAD
 ! Volumem control up
+=======
+! Volume control up
+>>>>>>> b64d7703a979d330669576b71bb7aebc5f0a12eb
 keycode 176 = XF86AudioRaiseVolume
 
 ! Start playing of audio >
@@ -539,3 +565,13 @@ keycode 176 = XF86AudioRaiseVolume
 
 ! print all active grabs to log
 !keycode ? = XF86LogGrabInfo
+<<<<<<< HEAD
+=======
+
+! Ensure dead keys are employed properly to compose acute, grave, tilde
+! and circumflex combinations. This may be the default already, but
+! defining them here makes those settings independent of any defaults.
+keycode 21 = dead_acute dead_grave dead_acute dead_grave dead_cedilla dead_ogonek dead_cedilla
+keycode 35 = plus asterisk plus asterisk dead_tilde macron asciitilde
+keycode 49 = dead_circumflex degree dead_circumflex degree U2032 U2033 U2032
+>>>>>>> b64d7703a979d330669576b71bb7aebc5f0a12eb

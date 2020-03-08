@@ -1,0 +1,6 @@
+if test -f "$ERRFILE"
+then
+	# Stop logging to "~/.xsession-errors".
+	ERRFILE=/dev/null
+	exec > "$ERRFILE" 2>& 1 < "$ERRFILE"
+fi
